@@ -1,0 +1,9 @@
+/* flex-box:عندك اول حاجه المفروض تعملها ايه 
+تدي للparent flex
+flex-direction:( row ...row-reverse ...column ....column-reverse)
+flex-wrap(wrap :....wrap-reverse)
+justify-content:(center .. flex-end .. flex-start .. space-around .. space-between.. space  ) 
+if dirtection:row ---> this will be change x 
+if dircetio: :column -->this will be change y 
+align-items:(center ..)
+*/

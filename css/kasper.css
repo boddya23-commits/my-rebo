@@ -1,0 +1,395 @@
+:root {
+    --main-color: #19c8fa;
+    --transparent-color: rgb(15 116 143 / 70%);
+    --section-padding: 100px;
+}
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing:border-box ;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Cairo", sans-serif;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul {
+    list-style: none;
+}
+header {
+width: 100%;
+position: absolute;
+}
+header .container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 90px;
+    z-index: 3;
+}
+header .container::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    height: 1px;
+    width: calc(100% - 30px);
+    left: 15px;
+    background-color: white;
+    z-index: 1;
+}
+header .container nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}  
+header .container nav .toggle-menu{
+    color: white;
+    width: 30px ;
+    height: 20px;
+}
+header .container nav  ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+header .container nav  ul li a:active ,
+header .container nav  ul li a:hover {
+    color: var(--main-color);
+        border-bottom: 1px solid var(--main-color);
+}
+header .container nav  .form {
+    width: 40px;
+    height: 25px;
+    margin-left: 20px;
+    border-left: 1px solid white;
+}
+header .container nav .ser {
+    color: white ;
+    position: absolute;
+    right: 0px;
+    transform: translateY(-50%);
+    top: 50%;
+    font-size: 20px;
+} 
+.design {
+    overflow: hidden;
+}
+.design .images {
+    display: flex;
+    left:  200px;
+    top:200px
+}
+.design .design-text h3 {
+    font-size: 22px;
+}
+.design .design-text li {
+ margin-top: 10px;
+ font-size: 17px;
+}
+@media (max-width: 768px) {
+    header .container nav  ul {
+    position: absolute ;
+    left: 0;
+    width: 100%;
+    top: 100%;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+    header .container nav  ul li a {
+        display: block;
+        padding: 15px;
+    }
+    header .container nav .toggle-menu:hover + ul {
+        display: flex;
+    }
+}
+@media (min-width: 768px) {
+    header .container nav {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+}  
+header .container nav  ul li a:active ,
+header .container nav  ul li a:hover {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+header .container nav  ul {
+    display: flex;
+    padding: 30px 10px;
+    position: unset;
+}
+header .container nav  ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 30px 10px;
+    z-index: 2;
+    position: relative;
+}
+header .container nav  ul li a:active ,
+header .container nav  ul li a:hover {
+    border-bottom: 1px solid var(--main-color);
+}
+header .container nav  .form {
+    width: 40px;
+    height: 25px;
+    margin-left: 50px;
+    border-left: 1px solid white;
+    position: relative;
+}
+header .container nav .ser {
+    color: white ;
+    position: absolute;
+    right: 0px;
+    transform: translateY(-50%);
+    top: 50%;
+    font-size: 20px;
+} 
+    .container {
+        width: 750px;
+    }
+    header .container nav .toggle-menu {
+        display: none;
+    }
+    header .container nav  ul li {
+    margin-left: 10px;
+}
+    header .container nav .form {
+        margin-left: 20px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+    header .container nav  ul li {
+    margin-left: 30px;
+}
+}
+@media (min-width: 1200px) {
+        .container {
+        width: 1170px;
+    }
+    header .container nav  ul li {
+    margin-left: 50px;
+}
+}
+main .landing {
+    min-height: 100vh;
+    background-color: #474747;
+    background-image: url(../images/landing.jpg);
+    background-size: cover;
+    position: relative;
+}
+main .landing .over-lay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.508);
+}
+main .landing .text {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--transparent-color);
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px;
+}
+main .landing  .text .content {
+    max-width: 500px;
+}
+main .landing .text .content h2 {
+font-size: 30px;
+line-height: 1.6;
+margin-bottom: 30px;
+font-weight: normal;
+}
+main .landing .content p {
+line-height: 2;
+font-size: 16px;
+}
+main .change-background {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+main .right ,
+main .left {
+    color: #ddd;
+    font-weight: 700;
+}
+main .left {
+    position: absolute;
+    left: 30px;
+}
+main .right {
+position: absolute;
+right: 30px;
+}
+main .landing .bullets {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+main .landing .bullets  li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+main .landing .bullets .full-color {
+    border-color:var(--main-color) ;
+    background-color: var(--main-color);
+}
+@media (max-width: 768px) {
+    main .landing .text {
+        width: 100%;
+    }
+    main .right ,
+main .left {
+    display: none  ;
+}
+}
+main section {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.main-heading {
+    text-align: center;
+}
+main .services .main-heading h2 {
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 50px;
+    position: relative;
+    text-transform: uppercase ;
+}
+main .services .main-heading p {
+    line-height: 2;
+    width: 500px;
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+main .services .main-heading h2::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100px;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%);
+    background-color: #333;
+    z-index: -1;
+}
+main .services .main-heading h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #333; 
+    background-color: white;
+}
+main .services .srv-content{
+    margin-top: 180px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 30px;
+}
+main .services .srv-content .srv {
+    display: flex;
+    margin-bottom: 30px ;
+}
+main .services .srv-content .srv i {
+    font-size: 40px;
+    margin-right: 50px;
+}
+main .services .srv-content .srv h3 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+.services .srv p {
+    color: #777;
+}
+@media (max-width: 767px) {
+main .services .srv-content{
+}
+main .services .srv-content .srv {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px ;
+    text-align: center;
+    margin-bottom: 30px;
+}
+main .services .srv-content .srv i {
+    font-size: 40px;
+    margin: 0;
+    width: auto;
+    margin-bottom: 20px;
+}
+main .services .srv-content .srv h3 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+main .services .srv-content .srv p {
+}
+}
+main .design {
+    background-image: url(../images/design-features.jpg);
+    background-size: cover;
+    height: 600px; 
+    position: relative;
+    display: flex;
+    z-index: -1;
+    justify-content: space-between;
+    align-items: center;
+}
+.design::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.508);
+    z-index: -2;
+}
+.design .design-text ,
+.design .images {
+    position: relative;
+    flex: 1;
+}
+.design .design-text {
+    height: 300px;
+    background-color: var(--transparent-color);
+    padding: 50px;
+    color:white ;
+}

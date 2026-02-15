@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+}
+.container {
+    background-color: black;
+    height:100vh ;
+    display: grid;
+    grid-template-rows: 100px repeat(5,minmax(100px,1fr));
+    grid-template-columns:repeat(2,1fr);
+    gap: 10px;
+    grid-template-areas:
+    "nav nav " 
+    "section section  " 
+    "section section  "
+    "section-1 section-2  "
+    "section-1 section-2  "
+    "foot foot"
+    ;
+}
+.container .nav ,.section ,.section-1 ,.section-2 ,.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: aliceblue
+    
+}
+.container .nav {
+    background-color: blue;
+    grid-area:nav;
+
+}
+.container .nav ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size:2rem ;
+}
+.container .nav ul li a{
+ color: wheat;
+ text-decoration: none;
+}
+.container .nav ul li a:visited{
+ color: black;
+} 
+.container .section{
+    background-color: red;
+    grid-area:section;
+}
+.container .section-1{
+    background-color: aqua;
+    grid-area:section-1;
+
+}
+.container .section-2{
+
+    background-color: blueviolet;
+        grid-area:section-2;
+} 
+.container .footer {
+    background-color: aquamarine;
+        grid-area:foot;
+}
